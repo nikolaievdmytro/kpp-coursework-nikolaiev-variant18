@@ -15,6 +15,13 @@ public final class DBUtil {
     }
 
     public static Connection getConnection() throws SQLException {
+        // Tomcat не реєструє драйвери з WEB-INF/lib автоматично через DriverManager,
+        // тому драйвер MySQL завантажується явно (без цього: "No suitable driver found")
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            throw new SQLException("Драйвер MySQL не знайдено у classpath", e);
+        }
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 

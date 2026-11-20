@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="4.0">
+
+    <servlet>
+        <servlet-name>ForestPlotServlet</servlet-name>
+        <servlet-class>ua.edu.nupp.kpp.server.ForestPlotServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForestPlotServlet</servlet-name>
+        <url-pattern>/plots</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ObservationServlet</servlet-name>
+        <servlet-class>ua.edu.nupp.kpp.server.ObservationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ObservationServlet</servlet-name>
+        <url-pattern>/observations</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViolationServlet</servlet-name>
+        <servlet-class>ua.edu.nupp.kpp.server.ViolationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViolationServlet</servlet-name>
+        <url-pattern>/violations</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InspectionTaskServlet</servlet-name>
+        <servlet-class>ua.edu.nupp.kpp.server.InspectionTaskServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InspectionTaskServlet</servlet-name>
+        <url-pattern>/tasks</url-pattern>
+    </servlet-mapping>
+
+</web-app>
